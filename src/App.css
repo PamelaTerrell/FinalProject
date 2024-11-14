@@ -1,42 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f1eb; /* Light cream background */
+  margin: 0;
+  padding: 0;
+  color: #5b3922; /* Brownish text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif;
+  color: #5b3922; /* Brownish color for headers */
+}
+
+/* Container for the whole app */
+.App {
   text-align: center;
+  padding: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header Styles */
+header {
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Main section with some padding */
+.home-container {
+  padding: 2rem;
+}
+
+.pairings-container {
+  padding: 2rem;
+  background-color: #f2e6d9; /* Lighter brown background for the pairings */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pairings-container h2 {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: #7b4f29; /* Darker brown for title */
+}
+
+.pairings-container p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #5b3922;
+}
+
+/* Links Styling */
+a {
+  text-decoration: none;
+  color: #7b4f29; /* Lighter brown color for links */
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5b3922; /* Darker brown when hovered */
+}
+
+/* Button Styles */
+button {
+  background-color: #7b4f29; /* Darker brown button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #5b3922; /* Dark brown on hover */
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #d2b88b; /* Grayish brown if disabled */
+  cursor: not-allowed;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #2e1f12; /* Dark background for dark mode */
+  color: #f4f1eb; /* Light text in dark mode */
+}
+
+body.dark-mode .pairings-container {
+  background-color: #3f2a1e; /* Darker brown background for pairings in dark mode */
+}
+
+body.dark-mode .pairings-container h2 {
+  color: #f4f1eb; /* Light text color in dark mode */
+}
+
+body.dark-mode button {
+  background-color: #d2b88b; /* Light brown button in dark mode */
+}
+
+body.dark-mode button:hover {
+  background-color: #a6896c; /* Slightly darker brown on hover */
+}
+
+/* Mobile & Tablet responsiveness */
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .pairings-container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
